@@ -1,5 +1,6 @@
 :root {
     --primary: #fff;
+    --primary-dark: #242424;
 }
 
 .btn {
@@ -24,14 +25,28 @@
     transform: all 0.3s ease-out;
 }
 
+.btn--primary-outline {
+    background-color: transparent;
+    color: var(--primary-dark);
+    padding: 6px 16px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    transform: all 0.3s ease-out;
+}
+
 .btn--medium {
     padding: 8px 20px;
     font-size: 20px;
 }
 
-btn--large {
+.btn--large {
     padding: 12px 26px;
     font-size: 20px;
+}
+
+.btn--xl {
+    padding: 12px 24px;
+    font-size: 28px;
 }
 
 .btn--medium:hover, .btn--large:hover {

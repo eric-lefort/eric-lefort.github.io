@@ -6,9 +6,10 @@
 }
 
 .home,
-.services,
-.products,
-.sign-up {
+.resume,
+.education,
+.projects,
+.about {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,8 +17,8 @@
   font-size: 3rem;
 }
 
-.services {
-  background-image: url('../public/img/img-2.jpg');
+.resume {
+  background-image: url('../public/img/stock/img-2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,8 +26,8 @@
   font-size: 100px;
 }
 
-.products {
-  background-image: url('../public/img/img-1.jpg');
+.education {
+  background-image: url('../public/img/stock/img-1.jpg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -34,8 +35,17 @@
   font-size: 100px;
 }
 
-.sign-up {
-  background-image: url('../public/img/img-8.jpg');
+.projects {
+  background-image: url('../public/img/stock/img-8.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.about {
+  background-image: url('../public/img/stock/img-8.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

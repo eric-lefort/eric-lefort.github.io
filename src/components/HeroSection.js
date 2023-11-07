@@ -6,23 +6,17 @@ import '../App.css'; // OPTIONAL??
 function HeroSection() {
   return (
     <div className='hero-container'>
-        <video src='/video/video-1.mp4' autoPlay loop muted />
-        <h1>ADVENTURE AWAITS</h1>
-        <p>What are you waiting for?</p>
+        <h1>ERIC LEFORT</h1>
+        <p>
+            I am an undergraduate Engineering Science student at the University of Toronto, with a major in Robotics Engineering. I am particularly interested in simulation of robotics systems and machine learning compute.
+        </p>
         <div className='hero-btns'>
-            <Button 
-                className='btns' 
-                buttonStyle='btn--outline'
-                buttonSize='btn--large'
-            >
-                GET STARTED
-            </Button>
             <Button 
                 className='btns' 
                 buttonStyle='btn--primary'
                 buttonSize='btn--large'
             >
-                WATCH TRAILER <i className='far fa-play-circle' />
+                SEE MY RESUME <i className='fas fa-chevron-right' />
             </Button>
         </div>
     </div>

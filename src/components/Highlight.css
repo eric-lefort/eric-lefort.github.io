@@ -1,0 +1,25 @@
+.highlight-container {
+    margin: 40px 20px;
+    padding: 20px 20px;
+    border-top: 4px solid #eee;
+    border-bottom: 4px solid #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-banner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.highlight-img {
+    max-height: 240px;
+    max-width: 100%;
+}
+
+.education-icon {
+    height: 36px;
+}

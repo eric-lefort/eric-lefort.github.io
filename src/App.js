@@ -3,9 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import Resume from './components/pages/Resume';
+import Education from './components/pages/Education';
+import Projects from './components/pages/Projects';
+import AtomicAI from './components/pages/Projects/AtomicAI';
+import TurtlebotRacing from './components/pages/Projects/TurtlebotRacing';
+import About from './components/pages/About';
 
 function App() {
   return (
@@ -15,9 +18,12 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' exact Component={Home}/>
-        <Route path='/services' exact Component={Services}/>
-        <Route path='/products' exact Component={Products}/>
-        <Route path='/sign-up' exact Component={SignUp}/>
+        <Route path='/resume' exact Component={Resume}/>
+        <Route path='/education' exact Component={Education}/>
+        <Route path='/projects' exact Component={Projects}/>
+        <Route path='/projects/atomic-ai' exact Component={AtomicAI}/>
+        <Route path='/projects/turtlebot-racing' exact Component={TurtlebotRacing}/>
+        <Route path='/about' exact Component={About}/>
       </Routes>
     </Router>
     </>
