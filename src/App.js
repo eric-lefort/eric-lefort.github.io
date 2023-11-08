@@ -7,7 +7,7 @@ import Resume from './components/pages/Resume';
 import Education from './components/pages/Education';
 import Projects from './components/pages/Projects';
 import AtomicAI from './components/pages/Projects/AtomicAI';
-import TurtlebotRacing from './components/pages/Projects/TurtlebotRacing';
+import Turtlebots from './components/pages/Projects/Turtlebots';
 import About from './components/pages/About';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path='/education' exact Component={Education}/>
         <Route path='/projects' exact Component={Projects}/>
         <Route path='/projects/atomic-ai' exact Component={AtomicAI}/>
-        <Route path='/projects/turtlebot-racing' exact Component={TurtlebotRacing}/>
+        <Route path='/projects/turtlebots' exact Component={Turtlebots}/>
         <Route path='/about' exact Component={About}/>
       </Routes>
     </Router>

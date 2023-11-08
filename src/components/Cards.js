@@ -15,17 +15,10 @@ function Cards() {
                         text='AtomicAi: A CNN atomic chess evaluation function'
                         path='/projects/atomic-ai' />
                     <CardItem 
-                        src='/img/turtlebot-racing/img2.jpeg'
+                        src='/img/turtlebots/img2.jpeg'
                         text='Racing Turtlebots and using ROS'
-                        path='/projects' />
+                        path='/projects/turtlebots' />
                 </ul>
-                {/* <ul className='cards__items'>
-                    <CardItem
-                        src='img/portfolio-website/img1.jpg'
-                        text='Experience Football on Top of the Himalayan Mountains'
-                        path='/education'
-                    />
-                </ul> */}
             </div>
         </div>
     </div>

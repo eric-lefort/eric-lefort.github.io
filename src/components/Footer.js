@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-        <section className='footer-subscription'>
+        {/* <section className='footer-subscription'>
             <p className='footer-subscription-heading'>
                 Join the Adventure newsletter to receive our best vacation deals.
             </p>
@@ -24,9 +24,9 @@ function Footer() {
                     <Button buttonStyle='btn--outline'>Subscribe</Button>
                 </form>
             </div>
-        </section>
+        </section> */}
         
-        <div class='footer-links'>
+        {/* <div class='footer-links'>
             <div className='footer-link-wrapper'>
                 <div class='footer-link-items'>
                     <h2>About Us</h2>
@@ -60,21 +60,20 @@ function Footer() {
                     <Link to='/'>Twitter</Link>
                 </div>
             </div>
-        </div>
+        </div> */}
         <section class='social-media'>
             <div class='social-media-wrap'>
                 <div class='footer-logo'>
                     <Link to='/' className='social-logo'>
-                    TRVL
-                    <i class='fab fa-typo3' />
+                        Eric Lefort
                     </Link>
                 </div>
-                <small class='website-rights'>TRVL © 2020</small>
+                <small class='website-rights'>Eric Lefort © 2023</small>
                 <div class='social-icons'>
                     <Link
                         class='social-icon-link facebook'
                         to='/'
-                        target='_blank'
+                        // target='_blank'
                         aria-label='Facebook'
                     >
                     <i class='fab fa-facebook-f' />
@@ -82,7 +81,7 @@ function Footer() {
                     <Link
                         class='social-icon-link instagram'
                         to='/'
-                        target='_blank'
+                        // target='_blank'
                         aria-label='Instagram'
                     >
                     <i class='fab fa-instagram' />
@@ -90,7 +89,7 @@ function Footer() {
                     <Link
                         class='social-icon-link youtube'
                         to='/'
-                        target='_blank'
+                        // target='_blank'
                         aria-label='Youtube'
                     >
                     <i class='fab fa-youtube' />
@@ -98,14 +97,14 @@ function Footer() {
                     <Link
                         class='social-icon-link twitter'
                         to='/'
-                        target='_blank'
+                        // target='_blank'
                         aria-label='Twitter'
                     >
                     <i class='fab fa-twitter' />
                     </Link>
                     <Link
                         class='social-icon-link twitter'
-                        to='/'
+                        to='https://www.linkedin.com/in/ericlefort1/'
                         target='_blank'
                         aria-label='LinkedIn'
                     >

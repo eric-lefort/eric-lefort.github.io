@@ -91,3 +91,15 @@
     border-radius: 5px;
 
 }
+
+.article-col table {
+    text-align: center;
+}
+
+.article-col table > tr > th {
+    border-bottom: 1px solid;
+}
+
+.table_col1 {
+    border-right: 2px solid;
+}
