@@ -6,8 +6,6 @@ import CardItemText from '../../CardItemText';
 function AtomicAI() {
   return (
     <>
-
-
         <div className='article-container'>
             <div className='article-col'>
                 <p>
