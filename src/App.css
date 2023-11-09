@@ -18,7 +18,8 @@
 }
 
 .resume {
-  background-image: url('../public/img/stock/img-2.jpg');
+  /* background-image: url('../public/img/stock/img-2.jpg'); */
+  background-color: #1b1b1b;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +28,8 @@
 }
 
 .education {
-  background-image: url('../public/img/stock/img-1.jpg');
+  /* background-image: url('../public/img/stock/img-1.jpg'); */
+  background-color: #1b1b1b;
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -36,7 +38,8 @@
 }
 
 .projects {
-  background-image: url('../public/img/stock/img-8.jpg');
+  /* background-image: url('../public/img/stock/img-8.jpg'); */
+  background-color: #1b1b1b;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +48,8 @@
 }
 
 .about {
-  background-image: url('../public/img/stock/img-8.jpg');
+  /* background-image: url('../public/img/stock/img-8.jpg'); */
+  background-color: #1b1b1b;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

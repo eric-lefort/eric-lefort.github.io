@@ -18,6 +18,20 @@ function Cards() {
                         src='/img/turtlebots/img2.jpeg'
                         text='Racing Turtlebots and using ROS'
                         path='/projects/turtlebots' />
+                    <CardItem 
+                        src='/img/physics-engine/mozilla_aabb.png'
+                        text='2D Physics Engine (WIP)'
+                        path='/projects/physics-engine' />
+                </ul>
+                <ul className='cards__items'>
+                    <CardItem 
+                        src='/img/cfd-lab/naca0012.jpeg'
+                        text='Summer Research: Computational Aerodynamics'
+                        path='/projects/cfd-lab' />
+                    <CardItem 
+                        src='/img/website/react_logo.svg'
+                        text='Building a website with React'
+                        path='/projects/website' />
                 </ul>
             </div>
         </div>
