@@ -51,13 +51,14 @@ export default function MansfieldMap() {
                 <img width='100%' src='/img/mansfield-map/semi-finished.jpg' alt='Semi-finished map' />
             </TextSection>
 
-            <TextSection><p>For fun, here are a few photos I took during the hike</p>
-            <img width='100%' src='/img/mansfield-map/mansfield-landscape-s.jpg' alt='Hike 1' />
+            <TextSection>
+                <p>For fun, here is a photo I took on the hike</p>
+                <img width='100%' src='/img/mansfield-map/mansfield-landscape-s.jpg' alt='Hike 1' />
             </TextSection>
 
             <TextSection header='Future Work'>
                 <p>
-                    I was very happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the countours for laser cutting.
+                    I was happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the countours for laser cutting.
                 </p>
             </TextSection>
         </>

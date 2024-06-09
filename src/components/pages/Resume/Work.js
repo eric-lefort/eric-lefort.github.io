@@ -41,7 +41,7 @@ function Work() {
       </TimelineSection>
 
       <TimelineSection 
-        title='Research Intern'
+        title='Research Student'
         location='Computational Aerodynamics Group, University of Toronto Institute for Aerospace Studies'
         date='May 2022 - Aug 2022'
       >
