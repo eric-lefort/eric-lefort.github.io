@@ -1,7 +1,6 @@
 import React from 'react'
 import './Projects.css'
 import Footer from '../../Footer';
-import CardItemText from '../../CardItemText';
 
 function TurtlebotRacing() {
   return (

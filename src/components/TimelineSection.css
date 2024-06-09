@@ -1,0 +1,35 @@
+
+.timeline-entry {
+    margin: 64px auto;
+}
+
+.timeline-entry h1 {
+  font-size: 1.5em;
+  color: black;
+}
+
+.timeline-entry h2 {
+  font-size: 1.2em;
+  color: gray;
+  font-weight: 10;
+}
+
+.timeline-entry h3 {
+  font-size: 1.2em;
+  color: gray;
+  font-weight: 100;
+}
+
+.timeline-entry p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.timeline-entry ul {
+  padding-left: 20px;
+  list-style-type: '—  ';
+}
+
+.timeline-entry li {
+    padding-top: 12px;
+}

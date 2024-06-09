@@ -1,0 +1,25 @@
+/* ExperienceTimeline.css */
+
+.vertical-timeline-element--work .vertical-timeline-element-title {
+    font-size: 1.5em;
+  }
+  
+  .vertical-timeline-element--work .vertical-timeline-element-subtitle {
+    font-size: 1.2em;
+    color: gray;
+  }
+  
+  .vertical-timeline-element--work p {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+    /* Custom styles for list items */
+    .vertical-timeline-element--work ul {
+        padding-left: 20px;
+        list-style-type: '—  '; /* Remove the default list style */
+  }
+  
+  .vertical-timeline-element--work li {
+    margin-bottom: 5px;
+  }

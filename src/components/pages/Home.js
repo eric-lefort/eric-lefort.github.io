@@ -1,16 +1,16 @@
 import React from 'react';
 import '../../App.css';
-import HeroSection from '../HeroSection';
-import Footer from '../Footer';
-import Cards from '../Cards';
-
-
+import Description from './Description';
+import Education from './Resume/Education';
+import Background from './Background';
+import Projects from './Projects';
 function Home() {
   return (
     <>
-        <HeroSection />
-        <Cards />
-        <Footer />
+        <Description />
+        <Education />
+        <Projects />
+        <Background />
     </>
   );
 }

@@ -1,16 +1,15 @@
 import React from 'react'
 import './Projects.css';
-import Footer from '../../Footer';
-import CardItemText from '../../CardItemText';
+import TextSection from '../../TextSection';
 
 function PhysicsEngine() {
   return (
     <>
-      <div className='article-container'>
-        <div className='article-col'>
-          <h1>Work-in-progress, see <a href='https://github.com/eric-lefort/doorknob/' target='_blank'>my github repo</a></h1>
-          <h2>Sweep and Prune Algorithm</h2>
+      <TextSection header='Physics Engine'>
+        Work-in-progress, see <a href='https://github.com/eric-lefort/doorknob/' target='_blank' rel='noreferrer'>my github repo</a>
+      </TextSection>
 
+      <TextSection header='Sweep and Prune Algorithm'>
           <p>
               The Sweep and Prune algorithm is a clever technique used in physics engines to efficiently handle collision detection in a 2D space. It's particularly effective for scenarios involving a large number of dynamic objects that may overlap or collide.
           </p>
@@ -48,8 +47,7 @@ function PhysicsEngine() {
           <p>
               By efficiently narrowing down the potential collision candidates through interval sorting and checking, the Sweep and Prune algorithm significantly optimizes collision detection in a 2D physics engine, making it well-suited for real-time applications with numerous dynamic objects.
           </p>
-        </div>
-      </div>
+      </TextSection>
     </>
   )
 }

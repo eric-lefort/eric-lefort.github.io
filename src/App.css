@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Franklin Gothic Light', 'PT Sans', sans-serif;
 }
 
 .home,
@@ -55,4 +55,17 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in forwards;
 }

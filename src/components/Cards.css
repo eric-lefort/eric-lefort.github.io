@@ -1,10 +1,6 @@
 .cards {
-    padding: 4rem;
+    padding: 2rem 0rem;
     background: #fff;
-}
-
-    h1 {
-    text-align: center;
 }
 
 .cards__container {
@@ -64,7 +60,7 @@
     padding: 6px 8px;
     max-width: calc((100%) - 60px);
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 100;
     color: #fff;
     background-color: #1f98f4;
     box-sizing: border-box;

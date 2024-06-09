@@ -1,5 +1,6 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: #fff;
+    color: #7d0062;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -16,6 +17,7 @@
     align-items: center;
     height: 80px;
     max-width: 1800px;
+    border-bottom: #ccc 1px solid;
 }
 
 .navbar-logo {
@@ -50,7 +52,7 @@
 }
 
 .nav-links {
-    color: #fff;
+    /* color: #fff; */
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -59,12 +61,12 @@
 }
 
 .nav-links:hover {
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #ccc;
     transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-    color: #fff;
+    color: #aaa;
 }
 
 .nav-links-mobile {
@@ -73,6 +75,10 @@
 
 .menu-icon {
     display: none;
+}
+
+.my-name {
+    color: #7d0062;
 }
 
 @media screen and (max-width: 960px) {
@@ -84,16 +90,17 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 70vh;
         position: absolute;
         top: 80px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        padding-bottom: 3em;
     }
 
     .nav-menu.active {
-        background: #242222;
+        background: #fff;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -108,9 +115,8 @@
     }
 
     .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
-        border-radius: 0;
+        color: mediumslateblue;
+        border: 1px solid lightcyan;
     }
 
     .navbar-logo {
@@ -131,7 +137,7 @@
     }
 
     .fa-times {
-        color: #fff;
+        color: #aaa;
         font-size: 2rem;
     }
 
@@ -144,15 +150,13 @@
         text-decoration: none;
         font-size: 1.5rem;
         background-color: transparent;
-        color: #fff;
+        color: #aaa;
         padding: 14px 20px;
-        border: 1px solid #fff;
         transition: all 0.3s ease-out;
     }
 
     .nav-links-mobile:hover {
         background: #fff;
-        color: #242424;
         transition: 250ms;
     }
 }

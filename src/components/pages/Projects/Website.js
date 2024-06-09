@@ -1,19 +1,22 @@
 import React from 'react';
 import './Projects.css';
-import Footer from '../../Footer';
-import CardItemText from '../../CardItemText';
+import TextSection from '../../TextSection';
 
 function Website() {
   return (
     <>
-      <div className='article-container'>
-        <div className='article-col'>
-          <h1>Web Development with React</h1>
-          <p>
-            WIP
-          </p>
-        </div>
-      </div>
+      <TextSection header='Learning React for Website Development'>
+        <ul>
+          <li>Understanding React components and JSX.</li>
+          <li>Handling user interactions and events.</li>
+          <li>Using props to pass data between components.</li>
+          <li>Rendering lists of data with map function.</li>
+          <li>Styling components with CSS or CSS-in-JS libraries like styled-components.</li>
+          <li>Navigating between pages with React Router.</li>
+          <li>Implementing responsive design with media queries.</li>
+          <li>Practicing through projects and experimenting with different features.</li>
+        </ul>
+      </TextSection>
     </>
   )
 }
