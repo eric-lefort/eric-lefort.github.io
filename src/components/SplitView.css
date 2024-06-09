@@ -34,10 +34,13 @@
     font-size: 24px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    padding-right: 24px;
 }
 
 .text-col {
     flex: 1.2;
+    color: #444;
+    font-size: 18px;
 }
 
 .text-col h2 {
@@ -51,19 +54,18 @@
 }
 
 .text-col p {
-    color: #444;
-    font-size: 20px;
     margin-bottom: 16px;
     font-weight: 10;
 }
 .text-col p a {
-    color: rgb(0, 169, 169);
+    color: rgb(0, 180, 180);
     text-decoration: none;
 }
 
 .text-col ul {
     padding-left: 20px;
     list-style-type: '—  ';
+    font-size: 16px;
 }
 
 .text-col li {

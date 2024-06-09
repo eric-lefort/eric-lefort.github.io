@@ -5,7 +5,6 @@ import TextSection from '../TextSection';
 
 function Projects() {
     return (
-        
       <>
         <TextSection header='Projects'>
           <p>

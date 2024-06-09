@@ -10,6 +10,7 @@ import Turtlebots from './components/pages/Projects/Turtlebots';
 import CFDLab from './components/pages/Projects/CFDLab';
 import Website from './components/pages/Projects/Website';
 import PhysicsEngine from './components/pages/Projects/PhysicsEngine';
+import MansfieldMap from './components/pages/Projects/MansfieldMap';
 import Footer from './components/Footer';
 
 function App() {
@@ -25,8 +26,9 @@ function App() {
         <Route path='/projects/atomic-ai' exact Component={AtomicAI}/>
         <Route path='/projects/turtlebots' exact Component={Turtlebots}/>
         <Route path='/projects/cfd-lab' exact Component={CFDLab}/>
-        <Route path='/projects/website' exact Component={Website}/>
         <Route path='/projects/physics-engine' exact Component={PhysicsEngine}/>
+        <Route path='/projects/mansfield-map' exact Component={MansfieldMap}/>
+        <Route path='/projects/website' exact Component={Website}/>
       </Routes>
       <Footer/>
     </Router>

@@ -9,7 +9,7 @@ export default function Description() {
                     I'm an Engineering Science: Robotics student at the University of Toronto. 
                 </p>
                 <p>
-                    My interests are in reinforcement learning, robotics, and distributed computation.
+                    My interests are in reinforcement learning, robotics, and distributed compute.
                 </p>
             </TextSection>
         </div>

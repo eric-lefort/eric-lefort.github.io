@@ -28,6 +28,10 @@ function Cards() {
                         text='Summer Research: Computational Aerodynamics'
                         path='/projects/cfd-lab' />
                     <CardItem 
+                        src='/img/mansfield-map/semi-finished.jpg'
+                        text='Topographic map of Mount Mansfield, VT'
+                        path='/projects/mansfield-map' />
+                    <CardItem 
                         src='/img/website/react_logo.svg'
                         text='Building a website with React'
                         path='/projects/website' />
