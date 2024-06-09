@@ -58,7 +58,7 @@ export default function MansfieldMap() {
 
             <TextSection header='Future Work'>
                 <p>
-                    I was happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the countours for laser cutting.
+                    I was happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the contours for laser cutting.
                 </p>
             </TextSection>
         </>
