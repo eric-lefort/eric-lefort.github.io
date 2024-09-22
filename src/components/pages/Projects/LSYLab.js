@@ -15,7 +15,7 @@ export default function LSYLab() {
                         <li>Using mujoco; creating simulation environments using URDF</li>
                         <li>Task scheduling: ordering lego brick placements to ensure more reliability</li>
                         <li>Bayesian optimization</li>
-                        <li>Reinforcement learning. See <a href="">this page</a>.</li>
+                        <li>Reinforcement learning. See <a href="/projects/lsy-rl">this page</a>.</li>
                     </ul>
                 </p>
             </TextSection>
