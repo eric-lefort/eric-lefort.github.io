@@ -11,6 +11,9 @@ import CFDLab from './components/pages/Projects/CFDLab';
 import Website from './components/pages/Projects/Website';
 import PhysicsEngine from './components/pages/Projects/PhysicsEngine';
 import MansfieldMap from './components/pages/Projects/MansfieldMap';
+import SeamCarving from './components/pages/Projects/SeamCarving';
+import LSYLab from './components/pages/Projects/LSYLab';
+import LSYRL from './components/pages/Projects/LSYRL';
 import Footer from './components/Footer';
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
         <Route path='/projects/cfd-lab' exact Component={CFDLab}/>
         <Route path='/projects/physics-engine' exact Component={PhysicsEngine}/>
         <Route path='/projects/mansfield-map' exact Component={MansfieldMap}/>
+        <Route path='/projects/seam-carving' exact Component={SeamCarving}/>
+        <Route path='/projects/lsy-lab' exact Component={LSYLab}/>
+        <Route path='/projects/lsy-rl' exact Component={LSYRL}/>
         <Route path='/projects/website' exact Component={Website}/>
       </Routes>
       <Footer/>
