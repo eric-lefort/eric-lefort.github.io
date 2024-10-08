@@ -10,7 +10,8 @@ export default function LSYRL() {
                 </p>
             </TextSection>
             <TextSection header=''>
-                <p>Paper coming soon...</p>
+                <p>Paper in review...</p>
+                <p>Site [<a href="https://sites.google.com/view/latent-action-priors" target="_blank" rel="noreferrer">Google Sites</a>]   Paper [<a href="https://arxiv.org/abs/2410.03246" target="_blank" rel="noreferrer">arXiv</a>]   Code [<a href="https://github.com/OliEfr/latent-action-priors" target="_blank" rel="noreferrer">GitHub</a>]</p>
             </TextSection>
         </>
     );
