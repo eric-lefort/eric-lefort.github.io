@@ -5,7 +5,6 @@ description: a project with a background image
 img: assets/img/cfd-lab/naca0012.jpeg
 importance: 3
 category: research
-date: 2022
 ---
 
 # Computational Aerodynamics Group
