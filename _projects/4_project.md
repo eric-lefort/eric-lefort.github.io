@@ -17,7 +17,7 @@ The algorithm was first introduced in [a paper](https://perso.crans.org/frenoy/m
 
 The algorithm works by identifying "seams" — paths of connected pixels that run from one edge of the image to another — that have the least visual importance. The least important seams are then removed or duplicated to shrink or expand the image while maintaining the overall composition.
 
-The authors highlight the beneficial features of the algorithm as well as some of its limitations. In the case of my implementation, I use the color gradient as the energy function. If subjects are smooth or uniformly colored, then gradients are not a good measure of importance in the image. This leads to distortions appearing in the subject. A great example of this is with portraits as well-lit faces that occupy much of the photo tend to low gradients, leading to cheeks and forehead being cropped by this technique. 
+The authors highlight the beneficial features of the algorithm as well as some of its limitations. In the case of my implementation, I use the color gradient as the energy function. If subjects are smooth or uniformly colored, then gradients are not a good measure of importance in the image. This leads to distortions appearing in the subject. A great example of this is with portraits as well-lit faces that occupy much of the photo tend to low gradients, leading to cheeks and forehead being cropped by this technique.
 
 ## Some More Examples
 

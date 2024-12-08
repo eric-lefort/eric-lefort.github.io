@@ -55,6 +55,7 @@ I've attached
     Left: a photo a picture of the nearly completed map on a backing of pine boards.
 
     Right: For fun, a photo I took on the hike.
+
 </div>
 
 ## Future Work
