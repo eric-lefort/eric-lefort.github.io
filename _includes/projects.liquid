@@ -10,7 +10,17 @@
           alt="project thumbnail"
           class="card-img-top"
         %}
+      {% elsif project.video %}
+        {%
+          include video.liquid
+          loading="eager"
+          path=project.video
+          sizes="250px"
+          alt="project video"
+          class="card-img-top"
+        %}
       {% endif %}
+
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>

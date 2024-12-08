@@ -5,21 +5,18 @@ description:
 img: assets/img/atomic-ai/atomic_chess_cropped.png
 importance: 2
 category: learning
-giscus_comments: true
 ---
 
 Chess-playing artificial intelligence has existed since the 1990s with the development of Deep Blue at IBM, the supercomputer system that went on to defeat Garry Kasparov, the then-world champion, in 1997. We focus on chess engines implemented purely in software, which work in a very similar manner to Deep Blue and other early computer systems designed for this purpose.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/atomic-ai/atomic_chess.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     In atomic chess, a capture triggers the immediate capture of the capturing piece as well as all non-pawn pieces within a 3x3 box centered on the capture.
 </div>
-
-# Atomic Chess AI
 
 This was a project I completed in my 3rd year of University for a group project in our course on applications of deep learning. (APS360)
 
@@ -74,4 +71,8 @@ When playing chess, human players are able to quickly identify the most critical
 
 Another result that was not expected was the amount of time required to adequately train our model. Given the complexity of our model, which was similar to or less than that in other engines we researched, it took many hours (up to eight hours, depending on hyperparameters) to train our model each time we modified it, when training on local hardware (Nvidia GTX 1070). If a similar project were to be completed with strict time constraints, we would recommend considering using a cloud compute service to train the model.
 
-For more details, see the full project report [here](assets/pdf/APS360_Final_Report.pdf).
+For more details, see the full project report [here](../assets/pdf/APS360_Final_Report.pdf).
+
+For more details, see the full project report [here]({{ site.baseurl }}/assets/pdf/APS360_Final_Report.pdf).
+
+For more details, see the full project report <a href="{{ site.baseurl }}/assets/pdf/APS360_Final_Report.pdf">here</a>.

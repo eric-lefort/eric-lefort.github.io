@@ -7,36 +7,6 @@ importance: 3
 category: learning
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-
-# Topographic Map of Mount Mansfield, VT
-
 As a way of commemorating a hike I did with a close friend of mine, I decided to create a topographical map of Mount Mansfield, VT, as a gift.
 
 After doing some research on the topic, I found that the state of Vermont has a great open-source data set for topographical maps. See [geodata.vermont.gov](https://geodata.vermont.gov/).
@@ -84,8 +54,7 @@ I've attached
 <div class="caption">
     Left: a photo a picture of the nearly completed map on a backing of pine boards.
 
-    Right: For fun, here is a photo I took on the hike:
-
+    Right: For fun, a photo I took on the hike.
 </div>
 
 ## Future Work
@@ -94,13 +63,13 @@ I was happy with the result of this project and I would consider developing a mo
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006902.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006902.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007015.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007015.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007152.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007152.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
     </div>
 </div>
 <div class="row">

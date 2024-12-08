@@ -5,10 +5,7 @@ description:
 img: assets/img/4.jpg
 importance: 1
 category: learning
-related_publications: false
 ---
-
-# Physics Engine
 
 Work-in-progress, see [my GitHub repo](https://github.com/eric-lefort/doorknob/).
 

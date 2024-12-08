@@ -1,13 +1,11 @@
 ---
 layout: page
 title: "Computational Aerodynamics Group"
-description: a project with a background image
+description: Research in meshing and computational fluid dynamics
 img: assets/img/cfd-lab/naca0012-cropped.jpeg
 importance: 3
 category: learning
 ---
-
-# Computational Aerodynamics Group
 
 From May to August 2022, I worked as a summer research student in the University of Toronto Institute for Aerospace Studies Computational Aerodynamics Group under Dr. David W. Zingg.
 
@@ -35,4 +33,4 @@ Throughout the summer, I divided my attention between three main tasks:
     This image shows the NACA 0012 airfoil, which I frequently used as a test case.
 </div>
 
-See the [lab report](assets/pdf/CFD_Lab_Report.pdf) for more information.
+See the [lab report]({{ site.baseurl }}/assets/pdf/CFD_Lab_Report.pdf) for more information.
