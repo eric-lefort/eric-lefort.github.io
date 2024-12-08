@@ -30,6 +30,18 @@ def gif_to_webm(input_path, output_path, quality=50, speed_factor=5, fps=30):
         # Adjust the speed of the video
         clip = clip.fx(lambda c: c.speedx(speed_factor))
 
+        # # crop video to 4x3
+        # width, height = clip.size
+        # target_height = width * 3 // 4  # Maintain height, adjust width for 4:3 aspect ratio
+
+        # x_center = width // 2
+        # y_center = height // 2
+        # x1, x2 = 0, width
+        # y1 = y_center - target_height // 2 
+        # y2 = y_center + target_height // 2 
+
+        # clip = clip.crop(x1=x1, x2=x2, y1=y1, y2=y2)
+
         # Write the video using FFmpeg with WebM codec
         clip.write_videofile(
             output_path,
@@ -45,6 +57,7 @@ def gif_to_webm(input_path, output_path, quality=50, speed_factor=5, fps=30):
         raise RuntimeError(f"Failed to convert GIF to WebM: {e}")
 
 # Example usage:
-gif_to_webm("human_reacher_0.gif", "human_reacher_0.webm")
-gif_to_webm("human_reacher_1.gif", "human_reacher_1.webm")
-gif_to_webm("human_reacher_2.gif", "human_reacher_2.webm")
+# gif_to_webm("human_reacher_0.gif", "human_reacher_0.webm")
+# gif_to_webm("human_reacher_1.gif", "human_reacher_1.webm")
+# gif_to_webm("human_reacher_2.gif", "human_reacher_2.webm")
+
