@@ -86,7 +86,7 @@ return L
         {% include figure.liquid path="assets/img/computer-graphics/yellow_sphere.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4">
-        {% include figure.liquid path="assets/video/computer-graphics/bunny.png" title="" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/computer-graphics/bunny.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4">
         {% include figure.liquid path="assets/img/computer-graphics/ball_scene.png" title="" class="img-fluid rounded z-depth-1" %}
@@ -99,12 +99,12 @@ Bounding Volume Hierarchies (BVH) are used to optimize ray tracing by grouping o
 
 <div class="row">
     <div class="col-sm-4">
-        {% include figure.liquid path="assets/img/computer-graphics/bvh_duck" title="" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/computer-graphics/bvh_duck.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4">
-        {% include video.liquid path="assets/video/computer-graphics/bvh_2" title="" class="img-fluid rounded z-depth-1" autoplay="true" loop="true" %}
+        {% include video.liquid path="assets/video/computer-graphics/bvh_2.webm" title="" class="img-fluid rounded z-depth-1" autoplay="true" loop="true" %}
     </div>
     <div class="col-sm-4">
-        {% include figure.liquid path="assets/img/computer-graphics/bvh_collision" title="" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/computer-graphics/bvh_collision.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
