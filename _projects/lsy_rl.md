@@ -32,6 +32,7 @@ This problem is apparent in many robotic control problems, as high dof systems o
 See results on our [website](https://sites.google.com/view/latent-action-priors) or see our paper on [arXiv](https://arxiv.org/abs/2410.03246).
 
 A big thanks to Oliver for working with me throughout this project. Thanks to you I learned a great deal about:
+
 - designing gymnasium environments
 - designing and running experiments
 - how different RL algorithms work, in particular PPO

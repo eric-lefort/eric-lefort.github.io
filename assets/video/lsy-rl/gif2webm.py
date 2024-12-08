@@ -1,7 +1,7 @@
 from moviepy.editor import VideoFileClip
 import os
 
-def gif_to_webm(input_path, output_path, quality=50, speed_factor=5, fps=30):
+def gif_to_webm(input_path, output_path, quality=40, speed_factor=3, fps=20):
     """
     Convert a GIF to a WebM file with size-efficient encoding and speed adjustment.
 
@@ -16,9 +16,6 @@ def gif_to_webm(input_path, output_path, quality=50, speed_factor=5, fps=30):
     """
     if not os.path.exists(input_path):
         raise FileNotFoundError(f"Input file not found: {input_path}")
-
-    if not input_path.lower().endswith('.gif'):
-        raise ValueError("Input file must be a GIF.")
 
     if not output_path.lower().endswith('.webm'):
         raise ValueError("Output file must be a WebM.")
@@ -60,4 +57,5 @@ def gif_to_webm(input_path, output_path, quality=50, speed_factor=5, fps=30):
 # gif_to_webm("human_reacher_0.gif", "human_reacher_0.webm")
 # gif_to_webm("human_reacher_1.gif", "human_reacher_1.webm")
 # gif_to_webm("human_reacher_2.gif", "human_reacher_2.webm")
+gif_to_webm("bvh.webm", "bvh_2.webm")
 
