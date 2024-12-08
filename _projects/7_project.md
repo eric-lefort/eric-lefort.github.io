@@ -1,81 +1,44 @@
 ---
 layout: page
-title: project 7
-description: with background image
+title: "Physics Engine"
+description: 
 img: assets/img/4.jpg
 importance: 1
-category: work
-related_publications: true
+category: learning
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Physics Engine
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Work-in-progress, see [my GitHub repo](https://github.com/eric-lefort/doorknob/).
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Sweep and Prune Algorithm
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The Sweep and Prune algorithm is used in physics engines to efficiently handle collision detection in a 2D space. It's particularly effective for scenarios involving a large number of dynamic objects that may overlap or collide.
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Spatial Organization
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- The algorithm organizes objects along two axes (X and Y) to create intervals or "swept" regions. These intervals represent the extents of each object along the respective axis, in other words, the intervals covered by the axis-aligned bounding boxes (AABB) for each object.
+- Define the AABBs of each object.
+- For the X and Y axes, define the occupied intervals as those containing the AABB of an object.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Sort Intervals
 
-{% raw %}
+- Sort the intervals along each axis separately, based on their min-coord. This can be efficiently done using a sorting algorithm like quicksort or mergesort.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Broadphase Detection
 
-{% endraw %}
+- To detect potential collisions, iterate through the sorted intervals along one axis (e.g., X-axis) and check for overlaps.
+- As you iterate, maintain a list of active intervals. When you encounter the end of an interval, remove it from the active list. When you encounter the start of an interval, add it to the active list.
+- For each active interval, check for overlaps along the other axis. Any overlaps correspond to collisions of the axis-aligned bounding boxes, which need to be examined again to determine if there is in fact a collision.
+
+### Efficiency
+
+- The key efficiency of this algorithm lies in the fact that you only need to check for collisions between adjacent intervals along the sorted axis. This reduces the number of pair-wise collision checks significantly.
+- The algorithm exploits the fact that if two intervals along one axis don't overlap, then there's no need to check for collisions along the other axis.
+
+### Dynamic Update
+
+- When objects move or change their positions, the intervals need to be updated accordingly. This involves updating the minimum and maximum coordinates and adjusting the sorted order.
+
+By efficiently narrowing down the potential collision candidates through interval sorting and checking, the Sweep and Prune algorithm significantly optimizes collision detection in a 2D physics engine, making it well-suited for real-time applications with numerous dynamic objects.

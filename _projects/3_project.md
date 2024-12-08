@@ -2,9 +2,9 @@
 layout: page
 title: Topographic Map of Mount Mansfield, VT
 description: A small personal project to learn GIS and laser cutting
-img: assets/img/mansfield-map/semi-finished.jpg
+img: assets/img/mansfield-map/semi-finished-cropped.jpg
 importance: 3
-category: projects
+category: learning
 ---
 
 Every project has a beautiful feature showcase page.
@@ -71,15 +71,43 @@ I used QGIS to process the data and generate contours, opting for a 60 m resolut
 
 I also engraved a small plaque with info about the peak, its coordinates, and the date of the hike. The final product was a 3D topographical map of Mount Mansfield, VT, which I gifted to my friend.
 
-I've attached a picture of the nearly completed map on a backing of pine boards.
+I've attached 
 
-![Semi-finished map](assets/img/mansfield-map/semi-finished.jpg)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/semi-finished.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/mansfield-landscape-s.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: a photo a picture of the nearly completed map on a backing of pine boards.
 
-For fun, here is a photo I took on the hike:
+    Right: For fun, here is a photo I took on the hike:
+</div>
 
-![Hike 1](assets/img/mansfield-map/mansfield-landscape-s.jpg)
 
 ## Future Work
 
 I was happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the contours for laser cutting, as this was tedious and could be automated readily.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006902.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007015.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007152.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006807.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007180.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>

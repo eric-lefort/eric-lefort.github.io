@@ -1,80 +1,37 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: "Turtlebot Racing"
+description: PID controllers and bayesian localization
+img: assets/img/turtlebots/img2_cropped.jpeg
 importance: 4
-category: fun
+category: learning
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Turtlebot Racing
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In my third-year Robotics course, I learned to use Python-ROS to program Turtlebot WafflePi robots. In the first few labs, I collaborated with my lab partner to implement line following using a PID controller. To do this, we sliced a row of pixels from the camera image, providing us with a 1D vector, which was then denoised using a simple rolling average filter and searched for the darkest point in the vector. We then configured the controller to regulate the input signal to track the set point in the center of the camera. The control input was the angular velocity omega of the robot, causing it to turn to correct its course.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+After tuning the parameters of the PID, we participated in a race between the dozen or so teams in the lab section.
+
+In the final few labs, we implemented a Bayesian localization algorithm, which effectively allowed the robot to localize itself along a 1D path dotted with landmarks, being colored tiles.
+
+## Bayesian Localization
+
+The robot begins with no information on its locality, characterized by a uniform distribution over the domain. As it moves around, it occasionally passes a landmark, at which point we consider that it can make an observation, updating the probability distribution for its location. Specifically, when passing over the tile, the robot uses its camera to identify the color. Given the possibility of measurement error, each color measurement taken has a chance of having been produced by a tile of any of the colors, with a probability given by the following table:
+
+| Z<sub>k</sub> \| x<sub>k</sub> | Red  | Green | Blue  | Yellow |
+|--------------------|-------|-------|-------|--------|
+| **Red**           | 0.7   | 0.05  | 0.05  | 0.6    |
+| **Green**         | 0.15  | 0.7   | 0.25  | 0.3    |
+| **Blue**          | 0.15  | 0.25  | 0.7   | 0.1    |
+
+For more details, see the full project report [here](assets/pdf/ROB301_Lab_Report.pdf).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/turtlebots/img1.jpeg" title="Turtlebot project image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Image from the Turtlebot Racing project.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

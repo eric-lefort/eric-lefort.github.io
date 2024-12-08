@@ -4,7 +4,7 @@ title: Seam Carving
 description: Content-Aware Image Resizing
 img: assets/img/seam-carving/BroadwayTowerSeamCarvingC.png
 importance: 3
-category: projects
+category: learning
 ---
 
 Thumbnail image: Broadway_tower.jpg: Newton2 at en.wikipedia  
@@ -23,11 +23,29 @@ The authors highlight the beneficial features of the algorithm as well as some o
 
 ## Some More Examples
 
-![Surfing image before and after seam carving](assets/img/seam-carving/surfing/img000.jpg)
-![Surfing output](assets/img/seam-carving/surfing/output.gif)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/seam-carving/surfing/img000.jpg" title="Surfing image before and after seam carving" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/seam-carving/surfing/output.gif" title="Surfing output" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The first two images show a surfing image before and after seam carving. The second image is a GIF demonstrating the output.
+</div>
 
-![Rock and water image before and after seam carving](assets/img/seam-carving/rock-water/img000.jpg)
-![Rock and water output](assets/img/seam-carving/rock-water/output.gif)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/seam-carving/rock-water/img000.jpg" title="Rock and water image before and after seam carving" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/seam-carving/rock-water/output.gif" title="Rock and water output" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The next two images show a rock and water scene before and after seam carving. The second image is a GIF demonstrating the output.
+</div>
 
 ## Additional Information
 
