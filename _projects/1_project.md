@@ -2,80 +2,92 @@
 layout: page
 title: project 1
 description: with background image
-img: assets/img/12.jpg
+img: assets/img/lsy-lab/lego-3.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Summer Research
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In May 2024, I moved to the city of Munich, Germany to work in the [Learning Systems Lab](https://www.dynsyslab.org/research/) under Professor Angela Schoellig for four months.
+
+### Skills I Developed:
+
+- Programming manipulators (Franka Emika Panda / FR3); forward and inverse kinematics; motion planning
+- Using mujoco; creating simulation environments using URDF
+- Task scheduling: ordering Lego brick placements to ensure more reliability
+- Bayesian optimization
+- Reinforcement learning. See [this page](/projects/lsy-rl).
+
+## Lego Assembly
+
+### Robot Controller
+For controlling the robot, we used the [franky](https://github.com/TimSchneider42/franky) repository. We implemented our own high-level functions on top of this library in various controller files. The main controller is `demo_controller.py`, and `controller.py` attempts to implement a controller that works both in simulation and on the real robot, which is challenging for manual demonstrations.
+
+### Planning Algorithm
+
+#### Current Status
+
+- [ ] Motion planning
+- [x] Task planning
+
+Task planning determines the sequence for placing Lego bricks, ensuring the FR3 gripper has free spaces on opposite sides to avoid collisions. The algorithm minimizes cases where bricks lack two opposing free sides.
+
+After challenges with MoveIt integration, we opted for a simpler layer-by-layer approach for motion planning. Future integration may require either custom motion control on top of MoveIt or giving it a read-only interface for planning.
+
+### Vision
+
+We integrate perception feedback into the system by using an Orbbec RGB-D camera in a third-person view to locate and track Lego bricks. De-ViT model is employed for object recognition, allowing us to detect and draw bounding boxes around the bricks. We then use Foundation Pose (Nvidia) to perform object tracking and extract the precise pose of each brick, enabling more accurate placement during construction.
+
+### Simulation
+
+See the [LegoPanda](https://github.com/eric-lefort/LegoPanda) repository.
+
+#### Features
+
+- [x] Franka FR3 and custom Duplo Lego baseplate
+- [x] XML injection to add arbitrary Lego bricks based on a config file
+- [x] Robot control using inverse kinematics (Python robotics toolbox)
+
+### Force Sensing
+
+The robot is equipped with sensors for force, torque, and other metrics. We are logging data to train a neural network classifier in the future, aiming to identify failed placements in real time based on force feedback.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6">
+        {% include figure.liquid path="assets/img/lsy-lab/force_img_success.png" title="Success" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6">
+        {% include figure.liquid path="assets/img/lsy-lab/force_img_fail.png" title="Fail" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-6">
+        {% include figure.liquid loading="eager" path="assets/img/lsy-lab/force_img_fail.png" title="Fail" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6">
+        {% include figure.liquid loading="eager" path="assets/img/lsy-lab/force_plot_fail.png" title="Fail Plot" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+In this example, it's relatively easy to distinguish between success and failure cases, but detecting failures in real time can be much harder in practice.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Web Interface
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The website enhances the Lego project by allowing users to design and position blocks through a drag-and-drop interface. Blocks can be placed on a constrained grid, stacked, and then sent as instructions to the robot for construction. The interface uses data from a camera to retrieve the pose of the blocks for visualization, with the option to use preset data if the camera is not available.
 
-{% raw %}
+{% include figure.liquid loading="eager" path="assets/img/lsy-lab/web_interface_demo.gif" title="Web Interface Demo" class="img-fluid rounded z-depth-1" %}
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+{% include figure.liquid path="/img/lsy-lab/web_interface_demo.gif" title="Web Interface Demo" class="img-fluid rounded z-depth-1" %}
+
+
+### Limitations
+
+The greatest challenge with the current setup is the dependency on a preprogrammed linear transformation between the Lego grid coordinate system and the robot frame. Despite extensive calibration, the robot accumulates errors between the specified origin and destination coordinates, which may lead to failed placements. This issue is partially addressed by the slower "drop and push" scheme, which is more robust to small errors, but the system remains prone to failure, especially when the desired brick location is between two existing bricks.
+
+<iframe width="1080" height="720" style="display: block; margin: auto;" src="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 {% endraw %}
