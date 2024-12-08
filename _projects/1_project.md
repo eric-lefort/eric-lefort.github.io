@@ -16,7 +16,6 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
 - Using mujoco; creating simulation environments using URDF
 - Task scheduling: ordering Lego brick placements to ensure more reliability
 - Bayesian optimization
-- Reinforcement learning. See [this page](../lsy-rl).
 
 ## Lego Assembly
 
