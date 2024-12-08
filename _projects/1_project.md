@@ -89,5 +89,3 @@ The website enhances the Lego project by allowing users to design and position b
 The greatest challenge with the current setup is the dependency on a preprogrammed linear transformation between the Lego grid coordinate system and the robot frame. Despite extensive calibration, the robot accumulates errors between the specified origin and destination coordinates, which may lead to failed placements. This issue is partially addressed by the slower "drop and push" scheme, which is more robust to small errors, but the system remains prone to failure, especially when the desired brick location is between two existing bricks.
 
 <iframe width="1080" height="720" style="display: block; margin: auto;" src="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-{% endraw %}
