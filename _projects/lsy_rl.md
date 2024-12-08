@@ -12,13 +12,13 @@ This project started off as an attempt to solve the problem of exploration in hi
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_0.webm" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_0.webm" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_1.webm" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_1.webm" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_2.webm" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid loading="eager" path="assets/video/lsy-rl/human_reacher_2.webm" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
     </div>
 </div>
 <div class="caption">

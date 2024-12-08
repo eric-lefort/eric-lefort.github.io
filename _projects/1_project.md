@@ -16,7 +16,7 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
 - Using mujoco; creating simulation environments using URDF
 - Task scheduling: ordering Lego brick placements to ensure more reliability
 - Bayesian optimization
-- Reinforcement learning. See [this page](/projects/lsy-rl).
+- Reinforcement learning. See [this page](../lsy-rl).
 
 ## Lego Assembly
 
@@ -41,7 +41,7 @@ We integrate perception feedback into the system by using an Orbbec RGB-D camera
 
 ### Simulation
 
-See the [LegoPanda](https://github.com/eric-lefort/LegoPanda) repository.
+See the [LegoPanda]() repository. (repo not currently public)
 
 #### Features
 
