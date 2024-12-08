@@ -2,7 +2,7 @@
 layout: page
 title: "Computational Aerodynamics Group"
 description: Research in meshing and computational fluid dynamics
-img: assets/img/cfd-lab/naca0012-cropped.jpeg
+img: assets/img/cfd-lab/naca0012_cropped.jpeg
 importance: 3
 category: learning
 ---
