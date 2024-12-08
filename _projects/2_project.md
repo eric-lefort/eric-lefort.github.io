@@ -1,25 +1,13 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Atomic Chess AI
+description: 
+img: assets/img/atomic-ai/atomic_chess.png
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -32,50 +20,59 @@ To give your project a background in the portfolio page, just add the img tag to
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+# Atomic Chess AI
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This was a project I completed in my 3rd year of University for a group project in our course on applications of deep learning. (APS360)
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+![Overview](img/atomic-ai/Overview.jpg)
 
-{% raw %}
+The objective of our project was to create an artificial intelligence system that is capable of playing the chess variant Atomic Chess. We focused on the heuristic or evaluation function, which, given a board position, will evaluate the strength of the board position, from the perspective of "white". The model was a deep convolutional neural network, which takes as input a vector representation of a chess board and returns a value between 0 and 1, with values closer to 1 indicating stronger positions for white and values closer to 0 indicating stronger positions for black.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+I modified an open-source C project ([Tom Kerrigan's Simple Chess program](http://www.tckerrigan.com/Chess/TSCP/)) using C++ and the ONNX runtime to replace the evaluation function with that from our trained model. The model itself used a multichannel bitmap representation of the chess board as input, based on work from the following paper: [https://arxiv.org/abs/1908.06660](https://arxiv.org/abs/1908.06660).
 
-{% endraw %}
+![Search](assets/img/atomic-ai/atomic-ai-search.png)
+
+We collected 900,000 games from the [lichess variant database](https://database.lichess.org/#variant_games). We transform each board so that the current player is at the bottom (white). Since chess is a zero-sum game, flipping the board should just yield the negative of the evaluation in the non-flipped board. The chess pieces of both players are then transformed into a 17-channel binary map of size 8x8 using the python-chess library, which encodes the position of all pieces.
+
+Our model performs well given the difficulty of the problem at hand, getting a classification accuracy of 0.625 with a BCE loss of 0.349 on the validation set. We compared our model to a baseline, which was a hard-coded heuristic accounting for:
+
+- Material value (piece value count)
+- Mobility score (number of legal moves available)
+- King safety (closeness of friendly pieces to enemy king, and vice-versa)
+
+Our results are significantly better than the ones obtained with the baseline model.
+
+![Model Results](assets/img/atomic-ai/modelres.PNG)
+
+Overall, our model is performing fairly well. It has some strong points and some limitations. We have also identified many improvements that could be made to improve the AI, some of which are directly related to deep learning, and some which are not.
+
+## Takeaways
+
+One of the main things that we learned from our results is that the implementation of the search engine surrounding the evaluation function network is highly important to the performance of a chess AI. This means that to develop a fast AI that performs at a very high level, we need to spend considerable time optimizing search, and ensuring that our model can perform inference in a very short amount of time.
+
+### Memoryless Model
+
+Being a straightforward CNN, our model has no ability to gain insights from sequences of board states. While this is not generally a problem, there exist a few edge cases where it is important to consider sequence dependency. These are the threefold repetition and mate-in-50 rules. These rules allow a game of chess to end in a draw under certain conditions, such as the same board position being reached three times in a game or a checkmate being unable to be reached in under 50 moves with one side having only their king remaining. While these conditions are rare, it is important to address them. We propose having a hard-coded rule which modifies the evaluation function when these conditions are met.
+
+### Prioritizing Important Positions and Parts of the Board
+
+When playing chess, human players are able to quickly identify the most critical parts of a chess board. An expert would spend little time thinking about board features and moves which are unlikely to produce advantageous results. This prioritization is not captured by our model. It would be interesting to explore the performance of a model which used attention, for instance, a transformer-based model, in this application.
+
+### Training Time
+
+Another result that was not expected was the amount of time required to adequately train our model. Given the complexity of our model, which was similar to or less than that in other engines we researched, it took many hours (up to eight hours, depending on hyperparameters) to train our model each time we modified it, when training on local hardware (Nvidia GTX 1070). If a similar project were to be completed with strict time constraints, we would recommend considering using a cloud compute service to train the model.
+
+For more details, see the full project report [here](/doc/APS360_Final_Report.pdf).
+
+---
+
+## Origin
+
+Chess-playing artificial intelligence has existed since the 1990s with the development of Deep Blue at IBM, the supercomputer system that went on to defeat Garry Kasparov, the then-world champion, in 1997. We focus on chess engines implemented purely in software, which work in a very similar manner to Deep Blue and other early computer systems designed for this purpose.
+
+![Atomic Chess](assets/img/atomic-ai/atomic_chess.png)
+
+### Atomic Chess
+
+In atomic chess, a capture triggers the immediate capture of the capturing piece as well as all non-pawn pieces within a 3x3 box centered on the capture.

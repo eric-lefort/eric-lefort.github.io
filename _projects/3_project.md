@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Topographic Map of Mount Mansfield, VT
+description: A small personal project to learn GIS and laser cutting
+img: assets/img/mansfield-map/semi-finished.jpg
 importance: 3
-category: work
+category: projects
 ---
 
 Every project has a beautiful feature showcase page.
@@ -35,47 +34,52 @@ To give your project a background in the portfolio page, just add the img tag to
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+# Topographic Map of Mount Mansfield, VT
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+As a way of commemorating a hike I did with a close friend of mine, I decided to create a topographical map of Mount Mansfield, VT, as a gift.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+After doing some research on the topic, I found that the state of Vermont has a great open-source data set for topographical maps. See [geodata.vermont.gov](https://geodata.vermont.gov/).
 
-{% raw %}
+Initially, I considered using an .obj file and writing a program to trace contours, but I soon discovered that there were already a plethora of existing geographic analysis tools that would do this for me.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+I used QGIS to process the data and generate contours, opting for a 60 m resolution after some experimentation. I then filtered these to remove contours below a certain size. After exporting the contour lines as SVGs, I undertook the laborious process of arranging all the contours to fit nicely on the plywood sheet I was to be laser cutting. At the same time, I decided to laser-engrave all the sheets with the locations where there was to be a sheet above it, making assembly much easier later on.
 
-{% endraw %}
+## Approximate Coordinates of Map
+
+- SE corner: (44.5, -72.77)
+- NW corner: (44.6, -72.85)
+
+## Process Summary
+
+1. **Install QGIS**: Software for viewing, editing, and analyzing geospatial data.
+2. **Fetch Data**: From geodata.vermont.gov and USGS.
+3. Faced difficulty navigating data; found a 2014 Lidar dataset split into tiles.
+4. **Process Data in QGIS**:
+   - Download all tiles.
+   - Combine tiles into a virtual raster.
+   - Generate contours using QGIS mesh operation.
+5. Encountered issues filtering for contour length.
+6. **Learning QGIS**:
+   - Discussed various functions.
+7. **Filter Contours**: Script to remove contours below a certain size.
+   - Faced challenges filtering based on contour length; considered using a new data source.
+8. **Arrange Contours**: Prepare for laser cutting.
+9. Glue all the laser cut pieces together, working with a few layers at a time.
+
+## Result
+
+I also engraved a small plaque with info about the peak, its coordinates, and the date of the hike. The final product was a 3D topographical map of Mount Mansfield, VT, which I gifted to my friend.
+
+I've attached a picture of the nearly completed map on a backing of pine boards.
+
+![Semi-finished map](assets/img/mansfield-map/semi-finished.jpg)
+
+For fun, here is a photo I took on the hike:
+
+![Hike 1](assets/img/mansfield-map/mansfield-landscape-s.jpg)
+
+## Future Work
+
+I was happy with the result of this project and I would consider developing a more automated process for generating these maps, particularly with the arranging of the contours for laser cutting, as this was tedious and could be automated readily.
+

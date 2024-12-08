@@ -1,80 +1,34 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Seam Carving
+description: Content-Aware Image Resizing
+img: assets/img/seam-carving/BroadwayTowerSeamCarvingC.png
 importance: 3
-category: fun
+category: projects
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Thumbnail image: Broadway_tower.jpg: Newton2 at en.wikipedia  
+Derivative work: Damir-NJITWILL - Broadway_tower.jpg, CC BY 2.5, [Wikimedia](https://commons.wikimedia.org/w/index.php?curid=12125987)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+# Seam Carving: Content-Aware Image Resizing
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Seam carving is an image resizing technique that allows for content-aware scaling of images. Seam carving intelligently removes or inserts pixels in areas of lower visual significance, preserving important elements without altering them. This is especially useful when adjusting an image's aspect ratio without distorting important features.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The algorithm was first introduced in [a paper](https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf) by Avidan and Shamir back in 2007. This method uses an image energy function to define the optimal seams for removal or insertion.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+The algorithm works by identifying "seams" — paths of connected pixels that run from one edge of the image to another — that have the least visual importance. The least important seams are then removed or duplicated to shrink or expand the image while maintaining the overall composition.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The authors highlight the beneficial features of the algorithm as well as some of its limitations. In the case of my implementation, I use the color gradient as the energy function to identify the importance of a pixel in a seam. Using gradients as the energy function, we rely on important areas of the image to have higher gradients. If subjects are smooth or uniformly colored, this may not be the case, leading to distortions appearing in the subject.
 
-{% raw %}
+## Some More Examples
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+![Surfing image before and after seam carving](assets/img/seam-carving/surfing/img000.jpg)
+![Surfing output](assets/img/seam-carving/surfing/output.gif)
 
-{% endraw %}
+![Rock and water image before and after seam carving](assets/img/seam-carving/rock-water/img000.jpg)
+![Rock and water output](assets/img/seam-carving/rock-water/output.gif)
+
+## Additional Information
+
+See my project on [GitHub](https://github.com/eric-lefort/seamcarving).
