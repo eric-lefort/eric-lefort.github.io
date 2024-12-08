@@ -64,13 +64,13 @@ I was happy with the result of this project and I would consider developing a mo
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006902.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000006902.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007015.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007015.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007152.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
+        {% include figure.liquid loading="eager" path="assets/img/mansfield-map/vermont-photos/1000007152.jpg" title="vermont photos" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">

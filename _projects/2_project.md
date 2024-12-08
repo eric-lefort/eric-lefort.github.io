@@ -71,8 +71,4 @@ When playing chess, human players are able to quickly identify the most critical
 
 Another result that was not expected was the amount of time required to adequately train our model. Given the complexity of our model, which was similar to or less than that in other engines we researched, it took many hours (up to eight hours, depending on hyperparameters) to train our model each time we modified it, when training on local hardware (Nvidia GTX 1070). If a similar project were to be completed with strict time constraints, we would recommend considering using a cloud compute service to train the model.
 
-For more details, see the full project report [here](../assets/pdf/APS360_Final_Report.pdf).
-
 For more details, see the full project report [here]({{ site.baseurl }}/assets/pdf/APS360_Final_Report.pdf).
-
-For more details, see the full project report <a href="{{ site.baseurl }}/assets/pdf/APS360_Final_Report.pdf">here</a>.

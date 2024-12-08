@@ -5,7 +5,7 @@ description: Research in Munich. How to explore efficiently in highly overactuat
 # img:
 video: assets/video/lsy-rl/human_reacher_0.webm
 importance: 4
-category: work
+category: learning
 ---
 
 This project started off as an attempt to solve the problem of exploration in high-dof (overactuated) environments. An example is the human reacher environment from **DEP-RL: Embodied Exploration for Reinforcement Learning in Overactuated and Musculoskeletal Systems** (2023) by Schumacher et al.

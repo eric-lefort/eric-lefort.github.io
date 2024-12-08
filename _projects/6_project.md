@@ -29,7 +29,7 @@ For more details, see the full project report [here]({{ site.baseurl }}/assets/p
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/turtlebots/img1.jpeg" title="Turtlebot project image" class="img-fluid rounded z-depth-1" style="transform: rotate(90deg);" %}
+        {% include figure.liquid loading="eager" path="assets/img/turtlebots/img1.jpeg" title="Turtlebot project image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
