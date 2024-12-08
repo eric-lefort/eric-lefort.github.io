@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ray Tracing
-description: an other project with a background image and giscus comments
+description: 3D modeling and meshing
 img: assets/img/computer-graphics/ball_scene_cropped.png
 importance: 2
 category: learning
