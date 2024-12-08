@@ -12,7 +12,6 @@ Derivative work: Damir-NJITWILL - Broadway_tower.jpg, CC BY 2.5, [Wikimedia](htt
 
 # Seam Carving: Content-Aware Image Resizing
 
-
 Seam carving is an image resizing technique that allows for content-aware scaling of images. Seam carving intelligently removes or inserts pixels in areas of lower visual significance, preserving important elements without altering them. This is especially useful when adjusting an image's aspect ratio without distorting important features.
 
 The algorithm was first introduced in [a paper](https://perso.crans.org/frenoy/matlab2012/seamcarving.pdf) by Avidan and Shamir back in 2007. This method uses an image energy function to define the optimal seams for removal or insertion.

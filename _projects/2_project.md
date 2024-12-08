@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Atomic Chess AI
-description: 
+description:
 img: assets/img/atomic-ai/atomic_chess_cropped.png
 importance: 2
 category: learning
@@ -23,14 +23,12 @@ Chess-playing artificial intelligence has existed since the 1990s with the devel
 
 This was a project I completed in my 3rd year of University for a group project in our course on applications of deep learning. (APS360)
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/atomic-ai/Overview.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">Graphic overview of the algorithm</div>
-
 
 The objective of our project was to create an artificial intelligence system that is capable of playing the chess variant Atomic Chess. We focused on the heuristic or evaluation function, which, given a board position, will evaluate the strength of the board position, from the perspective of "white". The model was a deep convolutional neural network, which takes as input a vector representation of a chess board and returns a value between 0 and 1, with values closer to 1 indicating stronger positions for white and values closer to 0 indicating stronger positions for black.
 

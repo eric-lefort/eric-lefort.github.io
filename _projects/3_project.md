@@ -71,7 +71,7 @@ I used QGIS to process the data and generate contours, opting for a 60 m resolut
 
 I also engraved a small plaque with info about the peak, its coordinates, and the date of the hike. The final product was a 3D topographical map of Mount Mansfield, VT, which I gifted to my friend.
 
-I've attached 
+I've attached
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -85,8 +85,8 @@ I've attached
     Left: a photo a picture of the nearly completed map on a backing of pine boards.
 
     Right: For fun, here is a photo I took on the hike:
-</div>
 
+</div>
 
 ## Future Work
 

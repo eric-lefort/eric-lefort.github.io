@@ -19,11 +19,11 @@ In the final few labs, we implemented a Bayesian localization algorithm, which e
 
 The robot begins with no information on its locality, characterized by a uniform distribution over the domain. As it moves around, it occasionally passes a landmark, at which point we consider that it can make an observation, updating the probability distribution for its location. Specifically, when passing over the tile, the robot uses its camera to identify the color. Given the possibility of measurement error, each color measurement taken has a chance of having been produced by a tile of any of the colors, with a probability given by the following table:
 
-| Z<sub>k</sub> \| x<sub>k</sub> | Red  | Green | Blue  | Yellow |
-|--------------------|-------|-------|-------|--------|
-| **Red**           | 0.7   | 0.05  | 0.05  | 0.6    |
-| **Green**         | 0.15  | 0.7   | 0.25  | 0.3    |
-| **Blue**          | 0.15  | 0.25  | 0.7   | 0.1    |
+| Z<sub>k</sub> \| x<sub>k</sub> | Red  | Green | Blue | Yellow |
+| ------------------------------ | ---- | ----- | ---- | ------ |
+| **Red**                        | 0.7  | 0.05  | 0.05 | 0.6    |
+| **Green**                      | 0.15 | 0.7   | 0.25 | 0.3    |
+| **Blue**                       | 0.15 | 0.25  | 0.7  | 0.1    |
 
 For more details, see the full project report [here](assets/pdf/ROB301_Lab_Report.pdf).
 

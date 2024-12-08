@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Summer Research in Munich
-description: 
+description:
 img: assets/img/lsy-lab/lego-3.jpg
 importance: 1
 category: learning
@@ -21,6 +21,7 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
 ## Lego Assembly
 
 ### Robot Controller
+
 For controlling the robot, we used the [franky](https://github.com/TimSchneider42/franky) repository. We implemented our own high-level functions on top of this library in various controller files. The main controller is `demo_controller.py`, and `controller.py` attempts to implement a controller that works both in simulation and on the real robot, which is challenging for manual demonstrations.
 
 ### Planning Algorithm
@@ -77,7 +78,6 @@ The robot is equipped with sensors for force, torque, and other metrics. We are 
 
 The website enhances the Lego project by allowing users to design and position blocks through a drag-and-drop interface. Blocks can be placed on a constrained grid, stacked, and then sent as instructions to the robot for construction. The interface uses data from a camera to retrieve the pose of the blocks for visualization, with the option to use preset data if the camera is not available.
 
-
 <div class="row">
     <div class="col-sm-8">
         {% include figure.liquid loading="eager" path="assets/img/lsy-lab/web_interface_demo.gif" title="Web Interface Demo" class="img-fluid rounded z-depth-1" %}
@@ -87,7 +87,6 @@ The website enhances the Lego project by allowing users to design and position b
 ### Limitations
 
 The greatest challenge with the current setup is the dependency on a preprogrammed linear transformation between the Lego grid coordinate system and the robot frame. Despite extensive calibration, the robot accumulates errors between the specified origin and destination coordinates, which may lead to failed placements. This issue is partially addressed by the slower "drop and push" scheme, which is more robust to small errors, but the system remains prone to failure, especially when the desired brick location is between two existing bricks.
-
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

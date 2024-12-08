@@ -8,6 +8,7 @@ category: learning
 ---
 
 # Computational Aerodynamics Group
+
 From May to August 2022, I worked as a summer research student in the University of Toronto Institute for Aerospace Studies Computational Aerodynamics Group under Dr. David W. Zingg.
 
 <div class="row">
