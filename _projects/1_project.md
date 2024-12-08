@@ -4,7 +4,7 @@ title: Summer Research in Munich
 description: 
 img: assets/img/lsy-lab/lego-3.jpg
 importance: 1
-category: work
+category: projects
 related_publications: false
 ---
 

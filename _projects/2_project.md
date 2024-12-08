@@ -4,7 +4,7 @@ title: Atomic Chess AI
 description: 
 img: assets/img/atomic-ai/atomic_chess.png
 importance: 2
-category: work
+category: projects
 giscus_comments: true
 ---
 
