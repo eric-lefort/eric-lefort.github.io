@@ -22,18 +22,17 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
             caption="This is an example of an embedded YouTube video."
         %}
         ### Embedding a YouTube Video -->
-        {% include video.liquid 
+        {% include video.liquid
+            loading="eager"
             path="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy"
             title="Demo video for the Learning Systems Lab"
-            class="youtube-video"
-            <!-- width="560"
-            height="315" -->
+            class="img-fluid rounded z-depth-1"
             controls="true"
             caption="This is an embedded YouTube video example."
         %}
 
-
     </div>
+
 </div>
 
 ### Skills I Developed:

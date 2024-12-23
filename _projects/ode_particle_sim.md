@@ -8,8 +8,6 @@ importance: 2
 category: learning
 ---
 
-
-
 As a short art project and learning experience, I teamed up with my friend and, together, we built an ordinary differential equation visualizer based on the flow of particles.
 
 We built the project in one evening, using Python and pygame to do rendering. Effectively, the code simply creates a number of randomly positioned particles and simulates their motion using the specified governing equation. (Which was usually a matrix specifying a linear, homogeneous ODE) In addition to simply rendering the pixels to the screen as circles, we create a fade effect by adding some factor (~0.99) times the previous screen to the current one. This simple trick improves the visualization greatly.
@@ -17,7 +15,6 @@ We built the project in one evening, using Python and pygame to do rendering. Ef
 ### Linear Homogeneous
 
 $$\dot \textbf{x} = \textbf{A} \textbf{x} $$
-
 
 In general solutions for a 2d system are simple. Based on the eigenvalues, for the real component of the eigenvalues, we will see exponential convergence or divergence centered around 0, and for the complex component, we will see a periodic revolution centered on the origin.
 
@@ -40,5 +37,6 @@ In general solutions for a 2d system are simple. Based on the eigenvalues, for t
 </div>
 
 ### Going Further
+
 - Nonhomogeneous
 - Second-order
