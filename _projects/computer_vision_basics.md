@@ -14,27 +14,27 @@ To learn about computer vision and image processing I took a course on computer 
 
 The most fundamental concept in computer vision is that of the camera model, more specifically the pinhole camera model. In the absence of distortion, rectangular objects appear as quadrilaterals with straight sides in the image plane. The transformation that describes this perspective transformation is called a homography.
 
-\[
+$$
 \tilde{H} = 
 \begin{bmatrix}
     h_{00} & h_{01} & h_{02} \\
     h_{10} & h_{11} & h_{12} \\
     h_{20} & h_{21} & 1 \\
 \end{bmatrix}
-\]
+$$
 
 One can think of a homography as transforming the points from their original 2D image plane to a new arbitrary, plane in R3. These points are then normalized, which effectively projects them along a straight line to camera onto the new image plane. 
 
 For this particular assignment, we take a picture of the University of Toronto's Soldiers Tower and perform histogram equalization to increase contrast. We then use a homography to warp the image onto a billboard in Yonge-Dundas Square. Specifically, we perform an inverse warp using bilinear interpolation to compute the pixel values in the transformed image.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/computer-vision/1-homography-histogram-eq/yonge_dundas_square.jpg" title="Yonge-Dundas Square" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-2 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/computer-vision/1-homography-histogram-eq/uoft_soldiers_tower_light.png" title="UofT Soldiers Tower" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/computer-vision/1-homography-histogram-eq/billboard_hacked.png" title="Billboard Hacked" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -71,8 +71,6 @@ In particular, I used a Laplacian of Gaussian (LoG) operation with a std of 0.5.
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/computer-vision/3-stereo/log/output_01.png" title="LoG Output - Std 0.1" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/computer-vision/3-stereo/log/output_05.png" title="LoG Output - Std 0.5" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -81,7 +79,7 @@ In particular, I used a Laplacian of Gaussian (LoG) operation with a std of 0.5.
     </div>
 </div>
 <div class="caption mt-2">
-    Results of the Laplacian of Gaussian operation on the input image. From left to right, top to bottom: the original input image, and outputs with standard deviations of 0.1, 0.5, and 1.
+    Results of the Laplacian of Gaussian operation on the input image. From left to right: the original input image, and outputs with standard deviations of 0.1, 0.5, and 1.
 </div>
 
 
