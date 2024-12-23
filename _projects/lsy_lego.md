@@ -11,7 +11,8 @@ related_publications: false
 In May 2024, I moved to the city of Munich, Germany to work in the [Learning Systems Lab](https://www.dynsyslab.org/research/) under Professor Angela Schoellig for four months.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-2 mt-4 mt-md-0"></div>
+    <div class="col-sm-8 mt-4 mt-md-0">
         {% include video.liquid
             loading="eager"
             path="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy"
@@ -22,6 +23,7 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
         %}
 
     </div>
+    <div class="col-sm-2 mt-4 mt-md-0"></div>
 
 </div>
 

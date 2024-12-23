@@ -82,13 +82,13 @@ return L
 {% endraw %}
 
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/computer-graphics/yellow_sphere.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/computer-graphics/bunny.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/computer-graphics/ball_scene.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -98,13 +98,13 @@ return L
 Bounding Volume Hierarchies (BVH) are used to optimize ray tracing by grouping objects into hierarchical volumes. These volumes, typically boxes, sets of objects and allow for quicker intersection tests. When a ray is cast, it first tests for intersections with the bounding volumes, which are easy to compute. Only if a volume is hit will the algorithm check its children, repeating this recursively until an intersection with a primitive (usually a triangle) is found. This drastically speeds up the ray tracing process, especially in scenes with many objects.
 
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/computer-graphics/bvh_duck.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include video.liquid path="assets/video/computer-graphics/bvh_2.webm" title="" class="img-fluid rounded z-depth-1" autoplay="true" loop="true" %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/computer-graphics/bvh_collision.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
