@@ -12,16 +12,6 @@ In May 2024, I moved to the city of Munich, Germany to work in the [Learning Sys
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <!-- <iframe width=80% src="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-        <!-- {% include video.html 
-            path="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy"
-            width="560"
-            height="315"
-            title="YouTube video player"
-            class="custom-video-class"
-            caption="This is an example of an embedded YouTube video."
-        %}
-        ### Embedding a YouTube Video -->
         {% include video.liquid
             loading="eager"
             path="https://www.youtube.com/embed/4ls3Hxa8JiY?si=bD9OYBjm8fH7tZRy"
