@@ -109,30 +109,59 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
+      "title": "USRA",
+      "date": "Aug 2023",
+      "awarder": "NSERC",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "Kenneth Ward Smith Scholarship, FASE Scholarship",
+      "date": "Aug 2022",
+      "awarder": "University of Toronto",
+      "url": "",
+      "summary": "$2,111.71. For academic achievement in the Faculty of Applied Science and Engineering."
+    },
+    {
+      "title": "AP Scholar Award",
+      "date": "Aug 2020",
+      "awarder": "College Board",
+      "url": "",
+      "summary": "Awarded for the achievement of three perfect 5/5 scores on AP examinations in Calculus BC, Physics C: Mechanics, and Electricity & Magnetism."
+    },
+    {
+      "title": "Faculty of Applied Science & Engineering Admission Scholarship",
+      "date": "Oct 2020",
+      "awarder": "University of Toronto",
+      "url": "",
+      "summary": "Awarded a $5,000 entrance scholarship for academic excellence."
+    },
+    {
+      "title": "CIE International Experience Award",
+      "date": "Aug 2024",
+      "awarder": "University of Toronto",
+      "url": "",
+      "summary": "Received $2,500 to support robotics research abroad in Munich, Germany."
+    }  
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
+      "name": "Machine Learning (Andrew Ng)",
+      "date": "Oct 2021",
+      "issuer": "Coursera -- Stanford University",
       "url": "https://example.com",
+      "icon": "fa-solid fa-location-dot"
+    },
+    {
+      "name": "Machine Shop Certification",
+      "date": "Oct 2021",
+      "issuer": "University of Toronto",
+      "url": "",
       "icon": "fa-solid fa-location-dot"
     }
   ],
   "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    }
+    {}
   ],
   "skills": [
     {
