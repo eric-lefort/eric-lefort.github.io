@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: true
 
 Sitemap: https://eric-lefort.github.io//sitemap.xml
