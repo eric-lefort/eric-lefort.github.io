@@ -4,14 +4,13 @@ title: about
 permalink: /
 subtitle: "University of Toronto. Engineering Science: Robotics"
 
-# profile:
-#   align: right
-#   image: prof_pic.jpg
-#   image_circular: false # crops the image to make it circular
-#   more_info: >
-#     <p>555 your office number</p>
-#     <p>123 your address street</p>
-#     <p>Your City, State 12345</p>
+profile:
+  align: right
+  image: me.jpg
+  image_circular: true # crops the image to make it circular
+  more_info: >
+    <p>eric.lefort8 at gmail.com</p>
+    <p>Toronto, ON, Canada</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
