@@ -27,8 +27,8 @@
       "name": "Learning Systems and Robotics Lab, Technische Universit\u00e4t M\u00fcnchen",
       "position": "Research Assistant",
       // "url":
-      "startDate": "May 2024",
-      "endDate": "Aug 2024",
+      "startDate": "2024 May",
+      "endDate": "2024 Aug",
       "summary": "Supervised by Dr. Angela Schoellig",
       "highlights": [
         "Conducted experimental reinforcement learning using a reduced action space for efficient exploration of over-actuated environments.",
@@ -39,8 +39,8 @@
     {
       "name": "Tenstorrent Inc.",
       "position": "AI Silicon Digital Design Co-op",
-      "startDate": "May 2023",
-      "endDate": "Apr 2024",
+      "startDate": "2023 May",
+      "endDate": "2024 Apr",
       "summary": "Member of the System-On-Chip team.",
       "highlights": [
         "Maintained a Python script for parametric generation of chip interconnect networks, adding support for mesh interconnect topologies.",
@@ -51,8 +51,8 @@
     {
       "name": "Computational Aerodynamics Group",
       "position": "Research Assistant",
-      "startDate": "May 2022",
-      "endDate": "Aug 2022",
+      "startDate": "2022 May",
+      "endDate": "2022 Aug",
       "summary": "Supervised by Dr. David W. Zingg",
       "highlights": [
         "Analyzed flow solver performance to identify opportunities for improving CFD algorithms.",
@@ -63,16 +63,16 @@
     {
       "name": "University of Toronto Formula SAE Team",
       "position": "Senior Member",
-      "startDate": "Sep 2021",
-      "endDate": "Feb 2023",
+      "startDate": "2021 Sep",
+      "endDate": "2023 Feb",
       "summary": "Contributor to Aerodynamics and Manufacturing teams.",
       "highlights": ["Used StarCCM to run simulations and optimize aerodynamic parameters for improved performance."]
     },
     {
       "name": "Rocscience Inc.",
       "position": "Software Developer",
-      "startDate": "May 2021",
-      "endDate": "Aug 2021",
+      "startDate": "2021 May",
+      "endDate": "2021 Aug",
       "summary": "Focused on automating UI testing and improving processes.",
       "highlights": [
         "Automated UI testing and created documentation using TestComplete and Python.",
