@@ -6,7 +6,7 @@ subtitle: "University of Toronto. Engineering Science: Robotics"
 
 profile:
   align: right
-  image: assets/img/me/neuschwanstein_front_crop.jpg
+  image: me/neuschwanstein_front_crop.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>eric.lefort8 at gmail.com</p>
