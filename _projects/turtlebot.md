@@ -7,8 +7,6 @@ importance: 3
 category: learning
 ---
 
-# Turtlebot Racing
-
 In my third-year Robotics course, I learned to use Python-ROS to program Turtlebot WafflePi robots. In the first few labs, I collaborated with my lab partner to implement line following using a PID controller. To do this, we sliced a row of pixels from the camera image, providing us with a 1D vector, which was then denoised using a simple rolling average filter and searched for the darkest point in the vector. We then configured the controller to regulate the input signal to track the set point in the center of the camera. The control input was the angular velocity omega of the robot, causing it to turn to correct its course.
 
 After tuning the parameters of the PID, we participated in a race between the dozen or so teams in the lab section.
