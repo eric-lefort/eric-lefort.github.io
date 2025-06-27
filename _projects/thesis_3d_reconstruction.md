@@ -89,7 +89,7 @@ Users can stop at any depth or interactively click to retrieve a desired granula
     </div>
 </div>
 <div class="caption">
-    RGB render of 3d gaussian splatting model of cooler.
+    RGB render of 3d gaussian splatting model of cooler. On the right are the embedded DINO features for improved object tracking.
 </div>
 
 Imitation Planning. Given these trajectories, a motion planner synthesises dual-arm motions that realise the same part displacements while respecting the robot’s kinematics. Crucially, the planner targets the object frame rather than the demonstrator’s hand pose, allowing grasps that differ from the human’s yet achieve the same functional outcome. The system is validated using a YuMi bimanual robot with nine everyday objects, achieving an average end-to-end success rate of 60 without task-specific training.
