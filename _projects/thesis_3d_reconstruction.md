@@ -82,7 +82,10 @@ Users can stop at any depth or interactively click to retrieve a desired granula
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid loading="eager" path="assets/video/thesis/render_dino.mp4" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
+        {% include video.liquid loading="eager" path="assets/video/thesis/render_rgb.mp4" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid loading="eager" path="assets/video/thesis/render_dig.mp4" title="example image" class="img-fluid rounded z-depth-1" autoplay="true" loop="true"%}
     </div>
 </div>
 <div class="caption">
