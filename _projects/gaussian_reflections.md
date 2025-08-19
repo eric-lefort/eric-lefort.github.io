@@ -89,18 +89,18 @@ Best configuration achieved: 2x downsampled 3d-gut on A100, using mcmc config 0.
 Demonstrated the improved realism with a simple reflection approach, and provided scripts that can be used to perform tests on different visual features and analyze what approaches are the most promising, i.e. shadows, reflections, etc.
 
 <div class="row">
-    <div class="col-sm-2 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gaussian-reflections/output_1.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-2 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gaussian-reflections/output_2.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-2 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gaussian-reflections/output_3.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-2 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gaussian-reflections/output_4.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -124,7 +124,7 @@ Some more ambitious future projects:
 - Reducing noise on the players, train a model to help bootstrap optimization, explore methods such as Difix3D.
 
 <div class="row">
-    <div class="col-sm-2 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gaussian-reflections/real.png" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
