@@ -1,0 +1,361 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Eric Lefort — Resume</title>
+<!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+<!-- <link rel="icon" type="image/png" href="C:\Users\e84414814\Pictures\rose.png"> -->
+<link rel="icon" type="image/svg+xml"
+      href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rose-icon lucide-rose'%3E%3Cpath d='M17 10h-1a4 4 0 1 1 4-4v.534'/%3E%3Cpath d='M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31'/%3E%3Cpath d='M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2'/%3E%3Cpath d='M9.77 12C4 15 2 22 2 22'/%3E%3Ccircle cx='17' cy='8' r='2'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+  /* Print-first, ATS-safe */
+  :root {
+    --fg: #000;
+    --muted: #555;
+    --rule: #000;
+    --fs: 10pt;
+    --lh: 1.1;
+    --w: 680px; /* desktop max */
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; color:var(--fg); background:#fff; }
+  body { font: normal var(--fs)/var(--lh) system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+  
+  /* Families (LaTeX mapping) */
+  .headerfont       { font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; font-weight: 700; }
+  .headerfontlight  { font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; font-weight: 300; }
+  main { margin: 0 auto; padding: 0.75in 0.6in; max-width: var(--w); }
+  header { border-bottom: 0px solid var(--rule); padding-bottom: 0pt; display:flex;   flex-direction: column; gap:0px; align-items:center; }
+  .subtitle {display:flex; gap:24px; align-items:baseline; flex:1; font-size:10pt; }
+  .subtitle svg {height: 1.2em; gap: 0px; stroke:#555; vertical-align:text-bottom; margin-right:0px; transform: translateX(0.3em); }
+  .hdr-left { flex:1; font-size:10pt; }
+  .hdr-right { text-align:right; }
+  h1 { margin:0; font-weight:700; font-size: 32pt; letter-spacing:0.5pt; }
+  a { color: var(--muted); text-decoration: underline; }
+  section { margin-top: 8pt; }
+  /* h2 { margin: 10pt 0 6pt; font-weight:600; font-size:13pt; color:#444; } */
+  h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14pt;
+    color: #888;
+    margin: 8pt 0 3pt;
+  }
+
+  h2::after{ flex:1; height: 0.3em; content:""; border-bottom:2px solid #000; opacity: 0.25; }
+
+  .row { display:flex; gap:8px; align-items:baseline; margin: 4px 0px}
+  .row .org { 
+    font-weight:700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    /*font-weight: 600;*/
+    color: #000; /*#761F1F;*/
+  }
+
+  .row .role { color:#888;    font-family: "Open Sans", sans-serif; }
+  .row .loc { margin-left:auto; font-size:10pt; color:#000; }
+  .row .date { margin-left:auto; font-size:10pt; color:#666; }
+  .row .muted {  font-size:12pt;   color:#666;  font-family: 'Open Sans Condensed', sans-serif;
+ }
+  ul { list-style-type: "— "; margin: 4pt 0 8pt 1em; padding-inline-start: 20px; } 
+  /* ul li::before { content: "— ";  color: #000;} */
+  li { margin: 2pt 0; }
+  .muted { color: var(--muted); }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+  /* Tighten vertical rhythm for one page */
+  @media print {
+    @page {
+      size: Letter;
+      margin: 0.25in;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      padding: 0.0in 0.5in;
+      max-width: none;
+    }
+    
+  }
+  @media screen and (max-width: 740px) {
+    main { padding: 24px 16px; }
+    h1 { font-size: 26pt; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <div class="row">
+      <h1><span class="headerfontlight">ERIC</span> <span class="headerfont">LEFORT</span></h1>
+    </div>
+    <div class="subtitle">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        eric.lefort8 at gmail.com</div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <a href="https://eric-lefort.github.io/">eric-lefort.github.io</a> <!--· <a href="https://github.com/eric-lefort">github.com/eric-lefort</a>--></div>
+      <!-- <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        Toronto, Canada</div> -->
+    </div>
+  </header>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <ul>
+      <li><em>Languages:</em> C++, C, Python, MATLAB, SystemVerilog</li>
+      <li><em>Tools:</em> Linux, Git, Docker, Make, LaTeX, ROS</li>
+      <li><em>Frameworks/Libraries:</em> Eigen, COLMAP, PyTorch, Gymnasium, MuJoCo, Genesis, Isaac Lab, NVIDIA Warp, Brax</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="work">
+    <h2 id="work">Technical Experience</h2>
+
+    <!-- Undergrad Thesis --> 
+    <div class="row">
+      <div class="org">University of Toronto, The Matter Lab</div>
+      <div class="loc">Toronto, Canada</div>
+    </div>
+    <div class="row">
+      <div class="role">Undergraduate Thesis Student / Supervised by Prof. Alan Aspuru-Guzik</div>
+      <div class="date">Oct 2024–Mar 2025</div>
+    </div>
+    <ul>
+      <li>Developed a pipeline to reconstruct articulated objects for simulation.</li>
+      <li>Libraries: PyTorch, nerfstudio, gaussian splatting, SegmentAnything, nvidia warp</li>
+    </ul>
+    <!-- Supervisor: Alán Aspuru-Guzik, Kourosh Darvish
+--Reconstructing articulated objects from images and video, using COLMAP, nerfstudio, gsplat
+--Refining reconstructed meshes using autoregressive transformer while reducing computational cost
+--Simulations with IsaacSim and Mujoco -->
+
+<!-- TUM LSR -->
+<div class="row">
+  <div class="org">Technical Univ. of Munich, Learning Systems & Robotics Lab</div>
+  <div class="loc">Munich, Germany</div>
+</div>
+<div class="row">
+  <div class="role">Research Assistant / Supervised by Prof. Angela Schoellig</div>
+  <div class="date">May–Aug 2024</div>
+</div>
+<ul>
+  <li>Created <a href="https://eric-lefort.github.io/projects/lsy_lego/">MuJoCo LEGO manipulation env</a> for learning contact-rich manipulation.</li>
+  <li>Used Orbbec ToF RGB-D + FoundationPose for Franka FR3 manipulation.</li>
+  <li>Received CIE International Experience Award+. $2,500.</li>
+</ul>
+
+<!-- Tenstorrent -->
+<div class="row">
+  <div class="org">Tenstorrent Inc.</div>
+  <div class="loc">Toronto, Canada</div>
+</div>
+<div class="row">
+  <div class="role">Digital Design Co-op, System-on-chip team</div>
+  <div class="date">May 2023–Apr 2024</div>
+</div>
+<ul>
+  <li>Optimized memory, bus widths, and CDC of RISC-V cpu, improving performance by 50%.</li>
+  <li>Built Python tooling to auto-generate RTL for Network-on-Chip interconnect</li>
+  <li>Developed new testbench SystemVerilog API to enable C-based NoC tests.</li>
+</ul>
+
+<!-- UTIAS CFD RA -->
+<div class="row">
+      <div class="org">University of Toronto, Computational Aerodynamics Group</div>
+      <div class="loc">Toronto, Canada</div>
+    </div>
+    <div class="row">
+      <div class="role">Research Assistant / Supervised by Dr. David W. Zingg</div>
+      <div class="date">May–Aug 2022</div>
+    </div>
+    <ul>
+      <li>Profiled internal CFD solver to identify bottlenecks and improve parallelism</li>
+      <li>Experimented with automated structured mesh-generation methods.</li>
+    </ul>
+
+    <!-- Rocscience -->
+    <!-- <div class="row">
+      <div class="org">Rocscience Inc.</div>
+      <div class="loc">Toronto, Canada</div>
+    </div>
+    <div class="row">
+      <div class="role">Software Developer</div>
+      <div class="date">May–Aug 2021</div>
+    </div>
+    <ul>
+      <li>Automated UI testing using TestComplete, Python, and Azure DevOps.</li>
+    </ul> -->
+
+    <!-- U of T Formula SAE -->
+    <!-- <div class="row">
+      <div class="org">University of Toronto Formula SAE</div>
+      <div class="loc">Toronto, Canada</div>
+    </div>
+    <div class="row">
+      <div class="role">Senior Member, Aerodynamics & Manufacturing</div>
+      <div class="date">Sep 2021–Feb 2023</div>
+    </div>
+    <ul>
+      <li>Optimized front and rear wing size and AOA using StarCCM CFD simulations.</li>
+    </ul> -->
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+
+    <div class="row">
+      <div class="org">Robotics Capstone: Autonomous Stealth Drone</div>
+      <div class="muted">C++, Python, ROS 2</div>
+      <div class="date">Oct 2024</div>
+    </div>
+    <ul>
+      <li>Leveraged Intel RealSense and IMU data to localize at high frequency >60 Hz.</li>
+      <!-- <li>Navigated by ray tracing to determine safe (occluded) flight regions. </li> -->
+      <li>Implemented time-optimal trajectory planning using trapezoidal velocity profiles.</li>
+    </ul>
+
+    <div class="row">
+      <div class="org">Ray Tracer</div>
+      <div class="muted">C++, OpenGL, GLSL</div>
+      <div class="date">Oct 2024</div>
+    </div>
+    <ul>
+      <li>Implemented ray tracing with Blinn-Phong shading. 100x speedup using BVH.</li>
+      <li>Procedural generation of planets using perlin noise and rasteration pipeline.</li>
+    </ul>
+
+    <div class="row">
+      <div class="org">2D Gauss–Seidel CFD Simulation</div>
+      <div class="muted">C++, Eigen</div>
+      <div class="date">Sep 2024</div>
+    </div>
+    
+    <div class="row">
+      <div class="org">Reinforcement Learning Research</div>
+      <div class="muted">PyTorch, Gymnasium, MuJoCo, CleanRL</div>
+      <div class="date">Aug 2024</div>
+    </div>
+    <ul>
+      <li>Co-authored <a href="https://arxiv.org/abs/2410.03246">conference paper</a>. Encoding imitation priors as latent action space</li>
+      <li>Achieved ~2x sample efficiency vs. loco-mujoco baselines.</li>
+    </ul>
+
+    <!-- <div class="row">
+      <div class="org">Variant Chess Engine with CNNs</div>
+      <div class="muted">Python, PyTorch, C, ONNX</div>
+      <div class="date">Apr 2023</div>
+    </div> -->
+    <!-- <ul>
+      <li>Developed CNN chess evaluation function. Integrated with C chess engine.</li>
+    </ul> -->
+
+    <!-- <div class="row">
+      <div class="org">Dragon12-Plus2 Firmware</div>
+      <div class="muted">C, Assembly</div>
+      <div class="date">Apr 2023</div>
+    </div>
+    <ul>
+      <li>Generated audio via external DAC over SPI; ISR and peripheral control exercises.</li>
+    </ul> -->
+
+    <div class="row">
+      <div class="org">Mobile Robot: Path Following & Obstacle Avoidance</div>
+      <div class="muted">C++, Arduino Uno</div>
+      <div class="date">Mar 2023</div>
+    </div>
+    <ul>
+      <li>Implemented low resolution mapping using an ultrasonic sensor, allowing obstacle avoidance.</li>
+    </ul>
+
+    <div class="row">
+      <div class="org">TurtleBot Waffle Pi, PID Control Competition, 1st Place</div>
+      <div class="muted">ROS, Python</div>
+      <div class="date">Oct 2022</div>
+    </div>
+    <!-- <ul>
+      <li>Won ROB301 class competition for path following robot, using tuned PID.</li>
+    </ul> -->
+
+    <!-- <ul>
+      <li>SOR-accelerated solver. High-order finite differences and linear multistep schemes, including RK4.</li>
+    </ul> -->
+
+    <!-- <div class="row">
+      <div class="org">Low-Cost Egg Powder Processing</div>
+      <div class="muted">CAD, 3D printing, Pico/Arduino</div>
+      <div class="date">Apr 2022</div>
+    </div>
+    <ul>
+      <li>Prototype with laser-cut/printed parts; sensor processing and motor control.</li>
+    </ul> -->
+
+    <!-- <div class="row">
+      <div class="org">TensorFlow Power Consumption Predictor</div>
+      <div class="muted">Python</div>
+      <div class="date">Jan 2022</div>
+    </div>
+    <ul>
+      <li>Exploratory modeling of power usage vs workload features.</li>
+    </ul> -->
+
+    <!-- <div class="row">
+      <div class="org">FPGA ALU on DE1-SoC</div>
+      <div class="muted">Verilog, Quartus, ModelSim</div>
+      <div class="date">Dec 2021</div>
+    </div>
+    <ul>
+      <li>Integer ALU including restoring divider; unit-level simulation.</li>
+    </ul> -->
+
+    <!-- <div class="row">
+      <div class="org">Content-Aware Image Resizing (Seam Carving)</div>
+      <div class="role muted">C</div>
+      <div class="date">Apr 2021</div>
+    </div>
+    <ul>
+      <li>Dynamic programming for least-energy seam removal.</li>
+    </ul> -->
+
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <div class="row">
+      <div class="org">University of Toronto</div>
+      <div class="loc">Toronto, Canada</div>
+    </div>
+    <div class="row">
+      <div class="role">BASc, Engineering Science — Robotics & AI Engineering</div>
+      <div class="date">2020–2025</div>
+    </div>
+    <ul>
+      <li>cGPA 3.81/4.0</li>
+      <li>Kenneth Ward Smith Scholarship. $2,111</li>
+      <li>Faculty of Applied Science and Engineering Admission Scholarship. $5,000</li>
+    </ul>
+  </section>
+</main>
+
+
+</body>
+</html>
