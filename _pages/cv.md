@@ -4,8 +4,6 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: Lefort_CV.pdf # you can also use external links here
+cv_doc: html/resume.html # you can also use external links here
 description:
-toc:
-  sidebar: left
 ---
